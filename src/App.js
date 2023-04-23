@@ -1,9 +1,13 @@
-function App() {
+import React from 'react'
+import ExpenseItem from './components/ExpenseItem'
+
+const App = () => {
   return (
     <div>
-      <h2>Let's get started!</h2>
+       <h1>hello</h1>
+       <ExpenseItem/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
