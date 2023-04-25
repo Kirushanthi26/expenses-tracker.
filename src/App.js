@@ -26,11 +26,15 @@ const App = () => {
 
   return (
     <div>
-      <h1>hello</h1>
       <ExpenseItem
         titleProps={expenses[0].title}
         amountProps={expenses[0].amount}
         dateProps={expenses[0].date}
+      />
+      <ExpenseItem
+        titleProps={expenses[1].title}
+        amountProps={expenses[1].amount}
+        dateProps={expenses[1].date}
       />
     </div>
   );
