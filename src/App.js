@@ -1,8 +1,8 @@
 import React from "react";
-import ExpenseItem from "./components/ExpenseItem";
+import Expense from "./components/Expense";
 
 const App = () => {
-  const expenses = [
+  const expensesDummyData = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -26,16 +26,7 @@ const App = () => {
 
   return (
     <div>
-      <ExpenseItem
-        titleProps={expenses[0].title}
-        amountProps={expenses[0].amount}
-        dateProps={expenses[0].date}
-      />
-      <ExpenseItem
-        titleProps={expenses[1].title}
-        amountProps={expenses[1].amount}
-        dateProps={expenses[1].date}
-      />
+      <Expense expensesDummyData={expensesDummyData}/>
     </div>
   );
 };
