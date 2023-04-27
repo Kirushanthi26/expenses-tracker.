@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Expense from "./components/Expenses/Expense";
 import NewExpense from "./components/NewExpense/NewExpense";
 
@@ -25,10 +25,19 @@ const App = () => {
     },
   ];
 
+  const [formExpenseData, setFormExpenseData] = useState(expensesDummyData)
+
+  const onGetExpenseData = (getExpenseData) => {
+    //console.log(getExpenseData)
+    setFormExpenseData((prevState)=>{
+      return [getExpenseData, ...prevState]
+    })
+  }
+
   return (
     <div>
-      <NewExpense/>
-      <Expense expensesDummyData={expensesDummyData}/>
+      <NewExpense onGetExpenseData={onGetExpenseData}/>
+      <Expense expensesDummyData={formExpenseData}/>
     </div>
   );
 };
