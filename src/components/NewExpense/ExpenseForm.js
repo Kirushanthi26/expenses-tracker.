@@ -39,18 +39,19 @@ const ExpenseForm = () => {
     e.preventDefault();
 
     const expenseData = {
-        title: userInput.enteredTitle,
-        amount: +userInput.enteredAmount,
-        date: new Date(userInput.enteredDate),
-      };
-      console.log(expenseData)
+      title: userInput.enteredTitle,
+      amount: +userInput.enteredAmount,
+      date: new Date(userInput.enteredDate),
+    };
+    console.log(expenseData);
 
-      setUserInput({
-        enteredTitle: "",
-        enteredAmount: "",
-        enteredDate: ""
-      });
-  }
+    //clear data
+    setUserInput({
+      enteredTitle: "",
+      enteredAmount: "",
+      enteredDate: "",
+    });
+  };
 
   return (
     <form onSubmit={submitHandler}>
