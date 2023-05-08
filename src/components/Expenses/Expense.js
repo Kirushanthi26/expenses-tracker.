@@ -17,6 +17,7 @@ const Expense = (props) => {
     <ExpensesFilter onChangeFilter={onChangeFilter} selected={filteredYear}/>
       {props.expensesDummyData.map((expense)=>
         <ExpenseItem
+        key={expense.id}
         titleProps={expense.title}
         amountProps={expense.amount}
         dateProps={expense.date}
