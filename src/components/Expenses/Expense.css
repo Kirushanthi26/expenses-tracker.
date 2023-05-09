@@ -5,3 +5,9 @@
     width: 50rem;
     max-width: 95%;
   }
+
+  .expenses_fallback {
+    color: white;
+    font-weight: 900;
+    text-align: center;
+  }
